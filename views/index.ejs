@@ -1,0 +1,55 @@
+<%#
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Journal</title>
+    <!-- GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- EXTERNAL STYLESHEET -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section class="about-container">
+   <h1>Travel Journal</h1> 
+   <p>Create, edit, or delete daily logs of your travels</p>
+   </section>
+
+   <section class="calendar-container">
+       <span class="pick-date">Pick a date to log:</span>
+       <form action="/dates" method="post">
+           <input type="date">
+           <input type="text" placeholder="Title" name="title">
+           <input type="text" placeholder="Description" name="description">
+            <button type="submit">Create New Entry</button>
+       </form>
+   </section>
+
+   <!-- Insert EJS -->
+    <!-- <%= entriesCollection %> -->
+
+    <h2>Your Travel Log</h2>
+    <ul class="entries">
+        <% for(let i=0; i < entriesCollection.length; i++) {%>
+            <li class="entry">
+                <span><%= entriesCollection[i].title %></span>:
+                <span><%= entriesCollection[i].description %></span>:
+
+            </li>
+        <% } %>
+    </ul>
+
+    <div>
+        <h2> Edit your entry</h2>
+        <button id="update-button">Edit your entry</button>
+    </div>
+<script src="/main.js"></script>
+</body>
+</html>
+
+%>
