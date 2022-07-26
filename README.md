@@ -1,6 +1,8 @@
 # Daily Travel Journal
 This app allows a user to log journal entries inspired by their travels. Users can create, edit, and delete journal entires and they can access past entries. 
 
+Image and demo site link coming soon.
+
 <!-- **Link to project:** http://recruiters-love-seeing-live-demos.com/ -->
 
 <!-- ![alt tag](http://placecorgi.com/1200/650)
