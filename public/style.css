@@ -72,11 +72,11 @@ table {
 /******************************************
 /* BASE STYLES
 /*******************************************/
-/* body {
+ body {
     font-family: 'ABeeZee', sans-serif;
 }
 
-h1 {
+h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -85,19 +85,19 @@ h1 {
 /******************************************
 /* LAYOUT
 /*******************************************/
-/* .about-container {
+ .about-container {
     display: flex;
     flex-direction: column;
     margin: 2rem 0 2rem 0;
     text-align: center;
-}
+}  
 
-.calendar-container {
+form {
     display: flex;
-    align-items: center;    
     flex-direction: column;
-    margin: 2rem 0 2rem 0;
-} */
+    justify-content: center;
+    width: 25%;
+}
 
 
 /******************************************

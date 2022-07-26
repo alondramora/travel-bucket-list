@@ -1,12 +1,3 @@
-// const update = document.querySelector('#update-button')
+const deleteText = document.querySelectorAll('.fa-times') // Select the X/ delete icon
 
-// update.addEventListener('click', _ => {
-//     fetch('/dates', {
-//         method: 'put',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({
-//             title,
-//             description 
-//         })
-//     })
-// })
+
