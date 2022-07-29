@@ -14,17 +14,17 @@ MongoClient.connect(connectionString, {useUnifiedTopology: true})
   .then (client => {
     console.log(`Connected to DB ${dbName}`)
     db = client.db(dbName) // Database
-    const entriesCollection = db.collection('entries-collection') // Collection
+    const entriesCollection = db.collection('entries-collection')
 
   //Set middleware
-    app.set('view engine', 'ejs') // Setting the view engine as ejs for dynamic html
+    app.set('view engine', 'ejs') 
     app.use(express.static('public'));
     app.use(express.urlencoded({ extended: true }))
     app.use(express.json())
 
     // GET METHOD
-    app.get('/', (req, res) => {
-      entriesCollection.find().toArray()
+    app.get('/', async (req, res) => {
+      await entriesCollection.find().toArray()
         .then(results => {
           console.log(results)
         res.render('index.ejs', { info : results}) // info is an OBJECT used when you render your EJS, results are going inside of that object. You can access this object in your ejs. 
@@ -33,8 +33,8 @@ MongoClient.connect(connectionString, {useUnifiedTopology: true})
     }) 
 
     // POST METHOD
-    app.post('/', (req, res) => {
-      entriesCollection.insertOne(req.body)
+    app.post('/addEntry', (req, res) => {
+      entriesCollection.insertOne({ title: req.body.travelDestination })
         .then(result => {
           res.redirect('/')
         console.log(result)
@@ -43,19 +43,18 @@ MongoClient.connect(connectionString, {useUnifiedTopology: true})
     })
     
     //EDIT/UPDATE METHOD
-    // code goes here 
+    //  edit edit edit
     
 
     //DELETE METHOD
-    // app.delete('/deleteEntry'(req, res) => {
-    //   console.log(request)
-    //   entriesCollection.deleteOne({ entry? : request.body.}) // Need to fix this line
-    //     .then(result => {
-    //       console.log('Entry Deleted')
-    //       res.json('Rapper Deleted')
-    //     })
-    //   .catch(error => console.error(error))
-    // })
+    app.delete('/deleteEntry', (req, res) => {
+      entriesCollection.deleteOne({ title: request.body.itemFromJS }) // Need to fix this line
+        .then(result => {
+          console.log('Entry Deleted')
+          res.json('Entry Deleted')
+        })
+      .catch(error => console.error(error))
+    })
 
 
     //LISTEN

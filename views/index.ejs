@@ -1,52 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Journal</title>
-    <!-- GOOGLE FONT-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
-
-    <!--ICONS-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
-    <!-- EXTERNAL STYLESHEET -->
-    <link rel="stylesheet" href="/style.css">
+    <title>Travel Bucket List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="about-container">
-   <h2>Travel Journal</h2> 
-   <p>Create, edit, or delete daily logs of your travels</p>
-   <section class="add-entry-section">
-    <form action="/" method="POST" class="add-entry-header">
-        <input type="text" name="title" value="title" placeholder="Title">
-        <textarea rows="6" cols="45" name="content">content</textarea>
-        <button type="submit"><span class="fas fa-plus">Submit</span></button>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Bucket List</title>
+</head>
+<body>
+    <h1>Travel Bucket List </h1>
+
+    <form action="/addEntry" method="POST">
+        <input type="text" placeholder="Travel Destination" name="travelDestination">
+        <input type="submit">
     </form>
-    <ul class="entry-list">
-        <% info.forEach(data => {%>
-            <li class="list-item">
-                <div class="list-item-title">
-                    <%= data.title %>
-                </div>   
-                <div class="list-item-content">
-                    <%= data.content %>
-                </div>  
-                <a href="" class="edit"> <%# Edit icon: Need to add href route %>
-                <span class="fas fa-edit"></span>
-                </a> 
-                <a href="" class="delete"> <%# Delete icon: Need to add href route %>
-                <span class="fas fa-times"></span>
-                </a> 
+
+    <ul class="listItems">
+        <% for(let i=0; i < info.length; i++){%>
+            <li class="item">
+                <% if(info[i]){ %>
+                    <span><%= info[i].title %>:</span> 
+                    <span><%= info[i].content %></span>
+                <% } %>
+                    <span class='fa fa-trash'></span> 
             </li>
-       <% }) %>
+        <% } %>
     </ul>
-   </section>
-   </section>
+
+    <script src='js/main.js'></script>
 </body>
 </html>
