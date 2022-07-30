@@ -5,21 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Bucket List</title>
+    <!-- External Stylesheet-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Font awesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Bucket List</title>
-</head>
-<body>
+    <img src="/yellow-van.webp" alt="Yellow van driving down a long windy desert road with tall red/orange mountains in the distance">
     <h1>Travel Bucket List </h1>
-
+    <p>Create a list of your dream travel destinations.</p>
     <form action="/addEntry" method="POST">
         <input type="text" placeholder="Travel Destination" name="travelDestination">
         <input type="submit">
@@ -30,7 +27,7 @@
             <li class="item">
                 <% if(info[i]){ %>
                     <span><%= info[i].title %></span> 
-                    <span><%= info[i].content %></span>
+                    <!-- <span><%= info[i].content %></span> -->
                 <% } %>
                     <span class='fa fa-trash'></span> 
             </li>
