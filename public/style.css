@@ -1,4 +1,4 @@
-/* CSS RESET */
+/*////////////////// CSS RESET //////////////////*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -49,21 +49,41 @@ table {
 	border-spacing: 0;
 }
 
-/* END OF CSS RESET */
+/*////////////////// END OF CSS RESET //////////////////*/
 
-/* BASE STYLES */
-body *{
-    font-family: 'ABeeZee', sans-serif;
+
+/*////////////////// BASE STYLES //////////////////*/
+
+body {
+    font-family: sans-serif;
     /* background-image: url(yellow-van.webp);
-    background-size: cover;
-    background-repeat: no-repeat; */
+    background-size: cover; */
+    /* background-repeat: no-repeat; */
+    
 }
 
-/* LAYOUT: MOBILE FIRST */ 
+/*////////////////// LAYOUT: MOBILE FIRST //////////////////*/ 
+
+.mainContainer {
+    background-color: #DB8523;
+    border-radius: 6px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    opacity: .95;
+}
+
 h1 {
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: bolder;
+    font-family: 'ABeeZee', sans-serif;
 }
 
 p {
@@ -71,18 +91,67 @@ p {
     text-align: center;
 }
 
-form {
+.yellowVanPic {
+    align-self: center; 
+    margin-top: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+}
+
+form, ul {
     margin-top: 2rem;
 }
 
-ul {
-    margin-top: 2rem;
+.listItemContainer {
+    /* border: 4px solid white; */
+    border-radius: 5px;
+    background-color: white;
+    margin: .2rem 2rem;
+}
+
+li {
+    padding: 10px 5px;
+    overflow: hidden;
+    color: black;
 }
 
 h1, form, ul {
     text-align: center;
 }
 
-img {
-    width: 100%;
+input[type="submit" i] {
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-weight: bold;
+}
+
+input[type="text" i] {
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+/*////////////////// MEDIA QUERIES ////////////////// */
+
+/* When the browser is at least 425px and above */
+@media screen and (min-width: 425px) {
+  body {
+    background-image: url(yellow-van-mirror.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+  }
+
+  p {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+  }
+
+  .yellowVanPic {
+      display: none;
+  }
 }
