@@ -4,10 +4,12 @@ Array.from(deleteButton).forEach((element)=>{
     element.addEventListener('click', deleteItem) 
 })
 
-async function deleteItem(){ 
+async function deleteItem() {
+    console.log('CLICKED')
+    console.log(this.parentNode.childNodes[1].innerText)
     const itemText = this.parentNode.childNodes[1].innerText 
     try{ 
-        const response = await fetch('deleteItem', { 
+        const response = await fetch('deleteEntry', { 
             method: 'delete', 
             headers: {'Content-Type': 'application/json'}, 
             body: JSON.stringify({
@@ -20,5 +22,5 @@ async function deleteItem(){
 
     }catch(err){ 
         console.log(err)  
-    } 
+    }     
 }

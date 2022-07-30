@@ -48,7 +48,7 @@ MongoClient.connect(connectionString, {useUnifiedTopology: true})
 
     //DELETE METHOD
     app.delete('/deleteEntry', (req, res) => {
-      entriesCollection.deleteOne({ title: request.body.itemFromJS }) // Need to fix this line
+      entriesCollection.deleteOne({ title: req.body.itemFromJS })
         .then(result => {
           console.log('Entry Deleted')
           res.json('Entry Deleted')
