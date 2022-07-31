@@ -136,15 +136,20 @@ input[type="text" i] {
 /* When the browser is at least 425px and above */
 @media screen and (min-width: 426px) {
   body {
-    background-image: url(yellow-van-mirror.webp);
+    background-image: url(yellow-van-mirror.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
-    align-items: center;
+  }
+
+  html, body {
+      min-height: 100%;
   }
 
   .mainContainer {
-      margin-left: 10rem;
+      margin-left: 8rem;
+      align-self: center;
   }
 
   p {
