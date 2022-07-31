@@ -1,5 +1,5 @@
-# Daily Travel Journal
-This app allows a user to log journal entries inspired by their travels. Users can create, edit, and delete journal entires and they can access past entries. 
+# Travel Bucket List
+This app allows a user to log the dream travel destinations. Users can create, edit, and delete entries.
 
 Image and demo site link coming soon.
 
@@ -15,7 +15,7 @@ I used Node and Express to create CRUD POST and GET routes in order to create an
 
 ## Optimizations
 
-I plan to add put and delete methods within my EJS and client side JavaScript files in order to give users the power to edit and delete posts. Additionally, I plan to style using CSS once I have the back-end complete.
+I plan to add put and delete methods within my EJS and client side JavaScript files in order to give users the power to edit and delete entries.
 
 ## Lessons Learned:
 
