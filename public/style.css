@@ -55,11 +55,7 @@ table {
 /*////////////////// BASE STYLES //////////////////*/
 
 body {
-    font-family: sans-serif;
-    /* background-image: url(yellow-van.webp);
-    background-size: cover; */
-    /* background-repeat: no-repeat; */
-    
+    font-family: sans-serif;  
 }
 
 /*////////////////// LAYOUT: MOBILE FIRST //////////////////*/ 
@@ -138,12 +134,17 @@ input[type="text" i] {
 /*////////////////// MEDIA QUERIES ////////////////// */
 
 /* When the browser is at least 425px and above */
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 426px) {
   body {
     background-image: url(yellow-van-mirror.webp);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
+    align-items: center;
+  }
+
+  .mainContainer {
+      margin-left: 10rem;
   }
 
   p {
