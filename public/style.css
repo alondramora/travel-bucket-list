@@ -61,8 +61,8 @@ body {
 /*////////////////// LAYOUT: MOBILE FIRST //////////////////*/ 
 
 .mainContainer {
-    background-color: #86473B;
-    border-radius: 6px;
+    background-color: #F9BC53;
+    border-radius: 10px;
     margin-left: 1rem;
     margin-right: 1rem;
     padding-bottom: 20px;
@@ -72,7 +72,7 @@ body {
     justify-content: center;
     flex-direction: column;
     color: white;
-    opacity: .95;
+    height: 90vh;
 }
 
 h1 {
@@ -164,6 +164,7 @@ input[type="text" i] {
   }
 
   h1 {
+      font-size: 3rem;
       margin-top: 0;
   }
 
