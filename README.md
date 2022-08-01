@@ -5,8 +5,8 @@ Image and demo site link coming soon.
 
 <!-- **Link to project:** http://recruiters-love-seeing-live-demos.com/ -->
 
-<!-- ![alt tag](http://placecorgi.com/1200/650)
- -->
+![A website with a yellow bus driving in the desert set as the background. On the left hand side of the page there is a yellow box where you can input a travel destination, and see your entires listed in a column of white boxes below that. ](/public/githubPhoto.png)
+
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript, Node, Express, EJS
